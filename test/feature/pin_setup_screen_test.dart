@@ -111,7 +111,6 @@ void main() {
       await iTapKey(tester, 'common_number_keyboard_1');
       await iTapKey(tester, 'common_number_keyboard_2');
       await iTapKey(tester, 'common_number_keyboard_3');
-      await iTapKey(tester, 'common_number_keyboard_3');
       await screenshotVerified(tester, 'pin_setup_screen_with_3_active');
     });
   });

@@ -7,6 +7,7 @@ class CombineExampleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: const Key('combine_example_screen'),
       appBar: AppBar(
         title: const Text('Combine example'),
       ),

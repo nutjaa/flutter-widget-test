@@ -28,6 +28,7 @@ class LandingBody extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
+              key: const Key('combine_button'),
               onPressed: () {
                 Navigator.pushNamed(context, '/combine-example');
               },

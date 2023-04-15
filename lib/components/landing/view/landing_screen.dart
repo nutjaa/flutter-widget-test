@@ -7,6 +7,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      key: Key('landing_screen'),
       backgroundColor: Colors.white,
       body: LandingBody(),
     );
