@@ -1,6 +1,5 @@
-import 'dart:async';
-
 import 'package:flutter_test/flutter_test.dart';
+import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:wigget_testing/components/combine_example/view/combine_example_screen.dart';
 import 'package:wigget_testing/components/common/molecules/pin_circle_active.dart';
 import 'package:wigget_testing/components/common/molecules/pin_circle_inactive.dart';
@@ -100,6 +99,20 @@ void main() {
       await theWidgetIsRunning(tester, const CombineExampleScreen());
       await iTapPinCodeWithValue(tester, '665321');
       await iSeeText(tester, 'success', 1);
+    });
+
+    testGoldens('''pincode set up screen verified''', (tester) async {
+      await theScreenIsRendered(tester, const CombineExampleScreen());
+      await screenshotVerified(tester, 'pin_setup_screen');
+    });
+
+    testGoldens('''pincode set up screen verified with 3 active code''', (tester) async {
+      await theScreenIsRendered(tester, const CombineExampleScreen());
+      await iTapKey(tester, 'common_number_keyboard_1');
+      await iTapKey(tester, 'common_number_keyboard_2');
+      await iTapKey(tester, 'common_number_keyboard_3');
+      await iTapKey(tester, 'common_number_keyboard_3');
+      await screenshotVerified(tester, 'pin_setup_screen_with_3_active');
     });
   });
 }

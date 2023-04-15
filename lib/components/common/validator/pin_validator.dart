@@ -1,6 +1,5 @@
 class PinValidator {
   bool isValid(String value) {
-    var f = false;
     if (!RegExp(r"^\d{6}$").hasMatch(value) || //
         RegExp(r"^(\d)\1+$").hasMatch(value) ||
         RegExp(r"^.*(\d)\1{3}.*$").hasMatch(value)) {

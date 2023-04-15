@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wigget_testing/components/common/molecules/pin_circle_active.dart';
 import 'package:wigget_testing/components/common/molecules/pin_circle_inactive.dart';
-import 'package:wigget_testing/configs/color.dart';
 
 class PinInputProgress extends StatefulWidget {
   final TextEditingController pinCodeController;

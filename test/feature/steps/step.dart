@@ -1,5 +1,6 @@
 export './the_widget_is_running.dart';
 export './the_screen_is_running.dart';
+export './the_screen_is_rendered.dart';
 export './i_see_key.dart';
 export './i_see_text.dart';
 export './i_enter_text_in_key.dart';
@@ -11,3 +12,5 @@ export './i_dont_see_text.dart';
 export './i_see_widget_type.dart';
 export './i_dont_see_widget_type.dart';
 export './i_tap_pin_code_with_value.dart';
+export './screenshot_verified.dart';
+export './screenshot_verified_with_custom_pump.dart';
