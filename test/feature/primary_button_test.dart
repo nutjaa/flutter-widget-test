@@ -22,11 +22,21 @@ void main() {
 
     testWidgets('''As user, i tap button and trigger onPressed''', (tester) async {
       final completer = Completer<void>();
+      var x = '';
       // ignore: avoid_print
-      await theWidgetIsRunning(tester, PrimaryButton(onPressed: completer.complete, text: 'THIS IS BUTTON', tag: 'primary_button'));
+      await theWidgetIsRunning(
+        tester,
+        PrimaryButton(
+          onPressed: () {
+            x = 'pressed';
+          },
+          text: 'THIS IS BUTTON',
+          tag: 'primary_button',
+        ),
+      );
       await iTapKey(tester, 'primary_button');
-      await iWait(tester);
-      expect(completer.isCompleted, isTrue);
+      //await iWait(tester);
+      expect(x == 'pressed', isTrue);
     });
   });
 }

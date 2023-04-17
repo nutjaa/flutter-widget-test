@@ -8,8 +8,8 @@ void main() {
       await theWidgetIsRunning(tester, const DefaultTextInput(label: 'Label', tag: 'default_text_input'));
       await iSeeKey(tester, 'default_text_input');
       await iSeeText(tester, 'Label', 1);
-      await iEnterTextInKey(tester, 'Sample', 'default_text_input');
-      await iSeeText(tester, 'Sample', 1);
+      await iEnterTextInKey(tester, '123456', 'default_text_input');
+      await iSeeText(tester, '123456', 1);
       await iSeeText(tester, 'Label', 1);
     });
   });

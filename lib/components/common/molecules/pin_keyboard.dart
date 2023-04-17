@@ -95,7 +95,7 @@ class PinKeyboard extends StatelessWidget {
       style: OutlinedButton.styleFrom(
         shape: const CircleBorder(),
         side: const BorderSide(
-          color: greyDustyColor,
+          color: redOrangeColor,
           style: BorderStyle.solid,
         ),
         fixedSize: Size(possibleSize, possibleSize),
